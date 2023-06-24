@@ -60,11 +60,7 @@ const Auth = () => {
       setLoading(false);
     } catch (err) {
       console.log(err);
-      if (err?.response?.data?.error) {
-        toast.error(err?.response?.data?.error);
-      } else {
-        toast.error(err?.response?.statusText);
-      }
+
       setLoading(false);
     }
   }, [email, name, password]);
