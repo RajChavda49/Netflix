@@ -1,5 +1,5 @@
-import prismadb from "@/lib/prismadb";
 import serverAuth from "@/lib/serverAuth";
+import prismadb from "@/lib/prismadb";
 import { NextApiRequest, NextApiResponse } from "next";
 import { without } from "lodash";
 
@@ -70,6 +70,6 @@ export default async function handler(
   } catch (error) {
     console.log(error);
 
-    return res.status(400).end();
+    return res.status(500).end();
   }
 }
